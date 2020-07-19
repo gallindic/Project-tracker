@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+    /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+    color: #666;
+    background-color: #f7f7f7;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+
+.wrap > .container {
+    padding: 70px 15px 20px;
+}
+
+.page-container{
+    margin-top: 5vh;
+}
+
+.block-container {
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 1em 2em;
+    position: relative;
+}
+
+
+/*  SIDEBAR-MENU   */
+
+.sidebar-menu{
+}
+
+.sidebar-menu > .sidebar-menu-header{
+    padding: 1.2rem 1rem;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 2rem;
+    color: #fff;
+    background-color: #428BCA;
+}
+
+.sidebar-menu > .sidebar-menu-body{
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: #fff;
+}
+
+.sidebar-menu-item > .sidebar-menu-item-link{
+    padding: 1.5rem 1.2rem;
+    display: block;
+    font-weight: 300;
+    font-size: 1.3rem;
+    cursor: pointer;
+    -webkit-transition: 0.2s ease-out;
+    transition: 0.2s ease-out;
+    -moz-transition: 0.2s ease-out;
+    -o-transition: 0.2s ease-out;
+}
+
+.sidebar-menu-body .sidebar-menu-item-link:hover:not(.active){
+    transform: translateX(10px);
+}
+
+.sidebar-menu-body > .sidebar-menu-item:last-child{
+    border-bottom: none;
+}
+
+.sidebar-menu .active {
+    /*todo*/
+}
+
+
+
+
+
+/*  OVERVIEW OF PROJECTS LIST   */
+
+.projects-list > .project-list {
+    margin-bottom: 1em;
+}
+
+.project-list > .project-list-header{
+    position: relative;
+}
+
+.project-list-header .project-list-controls {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.project-list > .project-list-body {
+    display: flex;
+    justify-content: flex-start;
+   align-items: center;
+
+}
+
+.project-list-body > .tasks{
+    flex: 5;
+} 
+
+.project-list-body > .percentage {
+    flex: 7;
+}
+
+.percentage .progress {
+    margin:0;
+}
+
+.complete-list {
+
+    border-right: 5px solid #5fc157;
+}
+
+/*  PROGRESS-BAR    */
+
+
+.progress-container > .progress-stats{
+    text-align: center;
+    color: #428BCA;
+    font-weight: 500;
+    margin-top: 1rem;
+    font-size: 2.5rem;
+}
+
+
+
+/*  TASKS-LIST-VIEW */
+
+.tasks-container{
+    margin-top: 2.5vh;
+    margin-bottom: 2em;
+}
+
+.task-list-item{
+    margin: 1em 0;
+}
+
+.task-list-item > .task-list-item-header {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.task-list-item-header > .task-list-controls {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.task-list-item-header > .task-finished-badge{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    padding: 0.2em 0.5em;
+    background-color: #4BB543;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.task-list-controls span{
+    cursor: pointer;
+}
+
+.task-list-item > .task-list-item-header::after {
+    content: '';
+    display: block;
+    width: 30%;
+    height: 1px;
+    background-color: #bcbcbc;
+    margin: 0.5rem auto 0 auto;
+
+}
+
+.task-list-item > .task-list-item-body.list-closed {
+    display: none;
+}
+
+.task-report-item > .report-info{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+
+.report-info > .report-name {
+    flex: 4;
+}
+
+.report-info > .report-actions {
+    flex: 4;
+    text-align: right;
+}
+
+.report-actions > span{
+    margin: 0 0.2em;
+    cursor: pointer;
+}
+
+.report-actions .show-plus{
+    display: inline-block;
+}
+
+.report-actions .hide-plus{
+    display: none;
+}
+
+.report-info > .report-percentage {
+    flex: 2;
+    color: #428BCA;
+    text-align: center;
+}
+
+.open-report-modal-button {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.custom-modal{
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    padding: 1em;
+    display: none;
+    z-index: 10;
+    background-color: #fff;
+    border-radius: 6px;
+    border: 1px solid #d3d3d3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.custom-modal > .modal-header{
+    position: relative;
+}
+
+.modal-header #modal-exit-btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.show{
+    display: block;
+}
+  
+/*  PROJECT-INFO    */
+
+.project-info{
+    margin-bottom: 1vh;
+}
+
+.project-info > h3 > .project-info-name {
+    font-size: 1.3rem;
+    font-weight: 200;
+    margin-right: 1em;
+}
+
+.project-info h3 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0.5em;
+}
+
+
+/*  ADD-TASK-FORM   */
+
+.add-task-container h5 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0.5em;
+}
